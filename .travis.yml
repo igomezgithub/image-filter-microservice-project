@@ -26,11 +26,10 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker-compose -f docker-compose-build.yaml build
-  - docker tag "$DOCKER_USERNAME"/udagram-api-user "$DOCKER_USERNAME"/udagram-api-user
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push "$DOCKER_USERNAME"/udagram-api-user
+  - docker push igomezdockerhub/udagram-api-user
   - docker push "$DOCKER_USERNAME"/udagram-api-feed
   - docker push "$DOCKER_USERNAME"/reverseproxy
   - docker push "$DOCKER_USERNAME"/udagram-frontend
