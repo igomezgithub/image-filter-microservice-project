@@ -17,7 +17,7 @@ before_install:
 
 # Pre-testing installs
 install:
-  - docker-compose -f docker-compose-build.yaml build --parallel
+  - docker-compose -f docker-compose-build.yaml build
   - docker-compose up
 
 after_success:
