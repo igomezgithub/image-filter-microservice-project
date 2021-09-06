@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: igomezdockerhub/udagram-frontend:latest
+        image: igomezdockerhub/udagram-frontend:v3
         imagePullPolicy: Always
         ports:
           - containerPort: 80
