@@ -19,7 +19,7 @@ services:
       AWS_PROFILE: $AWS_PROFILE 
       AWS_MEDIA_BUCKET: $AWS_MEDIA_BUCKET
       JWT_SECRET: $JWT_SECRET
-      URL: "http://a2a43a79c63d8470890e0d5206bcb2ab-443518949.us-east-2.elb.amazonaws:8100"
+      URL: "http://a95eb63b770774496b1a8076d04f0ba2-742364798.us-east-2.elb.amazonaws.com:8100"
   backend-feed:
     image: igomezdockerhub/udagram-api-feed:v4
     volumes:
@@ -33,7 +33,7 @@ services:
       AWS_PROFILE: $AWS_PROFILE 
       AWS_MEDIA_BUCKET: $AWS_MEDIA_BUCKET
       JWT_SECRET: $JWT_SECRET
-      URL: "http://a2a43a79c63d8470890e0d5206bcb2ab-443518949.us-east-2.elb.amazonaws:8100"
+      URL: "http://a95eb63b770774496b1a8076d04f0ba2-742364798.us-east-2.elb.amazonaws.com:8100"
   frontend:
     image: igomezdockerhub/udagram-frontend:v4
     ports:
