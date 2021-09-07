@@ -6,6 +6,6 @@ data:
   AWS_REGION: us-east-2
   POSTGRESS_DATABASE: cloud_image_processor_database_dev
   POSTGRESS_HOST: my-igomezpan-cloud-image-processor-database-ohio-dev.cl53pv1law1d.us-east-2.rds.amazonaws.com
-  URL: http://a95eb63b770774496b1a8076d04f0ba2-742364798.us-east-2.elb.amazonaws.com:8100
+  URL: http://a27b6e2e5526c4af98b3f091f71e5298-885935684.us-east-2.elb.amazonaws.com:8100
 metadata:
   name: env-config
