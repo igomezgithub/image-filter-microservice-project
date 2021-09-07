@@ -29,7 +29,7 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push "$DOCKER_USERNAME"/udagram-api-user:v3
-  - docker push "$DOCKER_USERNAME"/udagram-api-feed:v3
-  - docker push "$DOCKER_USERNAME"/reverseproxy:v3
-  - docker push "$DOCKER_USERNAME"/udagram-frontend:v3
+  - docker push "$DOCKER_USERNAME"/udagram-api-user:v4
+  - docker push "$DOCKER_USERNAME"/udagram-api-feed:v4
+  - docker push "$DOCKER_USERNAME"/reverseproxy:v4
+  - docker push "$DOCKER_USERNAME"/udagram-frontend:v4

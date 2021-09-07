@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: ConfigMap
 data:
-  AWS_MEDIA_BUCKET: my-igomezpan-cloud-image-processor-bucket-dev
+  AWS_MEDIA_BUCKET: my-igomezpan-cloud-image-processor-bucket-s3-dev
   AWS_PROFILE: default
   AWS_REGION: us-east-2
   POSTGRESS_DATABASE: cloud_image_processor_database_dev
   POSTGRESS_HOST: my-igomezpan-cloud-image-processor-database-dev.cpagk51u2jqf.us-east-1.rds.amazonaws.com
-  URL: http://localhost:8100
+  URL: http://a2a43a79c63d8470890e0d5206bcb2ab-443518949.us-east-2.elb.amazonaws.com:8100
 metadata:
   name: env-config

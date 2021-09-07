@@ -1,7 +1,7 @@
 version: "3"
 services:
   reverseproxy:
-      image: igomezdockerhub/reverseproxy:v3
+      image: igomezdockerhub/reverseproxy:v4
       ports:
           - 8080:8080
       restart: always
@@ -9,7 +9,7 @@ services:
         - backend-user
         - backend-feed
   backend-user:
-    image: igomezdockerhub/udagram-api-user:v3
+    image: igomezdockerhub/udagram-api-user:v4
     environment:
       POSTGRESS_USERNAME: $POSTGRESS_USERNAME
       POSTGRESS_PASSWORD: $POSTGRESS_PASSWORD 
@@ -19,9 +19,9 @@ services:
       AWS_PROFILE: $AWS_PROFILE 
       AWS_MEDIA_BUCKET: $AWS_MEDIA_BUCKET
       JWT_SECRET: $JWT_SECRET
-      URL: "http://localhost:8100"
+      URL: "http://a2a43a79c63d8470890e0d5206bcb2ab-443518949.us-east-2.elb.amazonaws:8100"
   backend-feed:
-    image: igomezdockerhub/udagram-api-feed:v3
+    image: igomezdockerhub/udagram-api-feed:v4
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
@@ -33,8 +33,8 @@ services:
       AWS_PROFILE: $AWS_PROFILE 
       AWS_MEDIA_BUCKET: $AWS_MEDIA_BUCKET
       JWT_SECRET: $JWT_SECRET
-      URL: "http://localhost:8100"
+      URL: "http://a2a43a79c63d8470890e0d5206bcb2ab-443518949.us-east-2.elb.amazonaws:8100"
   frontend:
-    image: igomezdockerhub/udagram-frontend:v3
+    image: igomezdockerhub/udagram-frontend:v4
     ports:
       - "8100:80"

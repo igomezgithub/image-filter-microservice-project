@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-user
-        image: igomezdockerhub/udagram-api-user:v3
+        image: igomezdockerhub/udagram-api-user:v4
         imagePullPolicy: Always               
         env:
         - name: URL
