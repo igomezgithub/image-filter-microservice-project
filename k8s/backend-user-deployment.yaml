@@ -17,7 +17,14 @@ spec:
       containers:
       - name: backend-user
         image: igomezdockerhub/udagram-api-user:v4
-        imagePullPolicy: Always               
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "2048Mi"
+            cpu: "1000m"              
         env:
         - name: URL
           valueFrom:
